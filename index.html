@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<link rel="stylesheet" href="craps.css">
+	<link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row one">
+			<div id="swoosh">
+				<img src="swoosh.png" alt="">
+			</div>
+			<div class="col-md-4 outter">
+					<img  class="dieL" src="https://openclipart.org/image/2400px/svg_to_png/213457/dice3.png" alt="a single die.">
+			</div>
+			<div class="col-md-4">
+				<div class="heading outter">
+					<h1>Craps Star</h1>
+					<h4>Street craps from the safety of home</h4>
+				</div>
+			</div>
+			<div class="col-md-4 outter">
+				<div>
+					<img class="dieR" src="https://openclipart.org/image/2400px/svg_to_png/213457/dice3.png" alt="a single die.">
+				</div>
+			</div>
+		</div>
+		<div class="row two">
+			<div class="col-md-3">
+				<h3>Rolls & Rules</h3>
+				<div class="count slide">
+					<div class="rollsNrules">
+						<h2 id="rollCount">
+							0
+						</h2>
+						<div class="rules">
+							<p>The rules of the game are as follows.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-9"></div>
+		</div>
+		<div class="row three">
+			<div class="col-md-6 sandBox">
+				<h2>Player</h2>
+				<table class="table">
+					<tr>
+						<th scope="row">Die 1</th>
+						<td colspan="2"><input type="text" class="form-control" id="d1"></td>
+					</tr>
+					<tr>
+						<th scope="row">Die 2</th>
+						<td colspan="2"><input type="text" class="form-control" id="d2"></td>
+					</tr>
+					<tr>
+						<th scope="row">Sum</th>
+						<td colspan="2"><input type="text" class="form-control" id="sum"></td>
+					</tr>
+					<tr>
+						<th scope="row">Point</th>
+						<td colspan="2"><input type="text" class="form-control" id="point"></td>
+					</tr>
+				</table><br>
+				<form id="roll">
+					<input type="submit" class="btn btn-primary btn-lg btn-block" value="submit">
+				</form>
+			</div>
+			<!-- This is where the animations go! -->
+			<div class="col-md-3 dice">
+				<div class="dieOne">
+					<div class="die show-front">
+						<figure class="front 1"><img src="1.png" alt="die side 1"></figure>
+						<figure class="back 2"><img src="2.png" alt="die side 2"></figure>
+						<figure class="right 3"><img src="3.png" alt="die side 3"></figure>
+						<figure class="left 4"><img src="4.png" alt="die side 4"></figure>
+						<figure class="top 5"><img src="5.png" alt="die side 5"></figure>
+						<figure class="bottom 6"><img src="6.png" alt="die side 6"></figure>
+					</div>
+				</div>
+				<div id="options">
+				  <p id="show-buttons">
+				    <input class="show-front"></input>
+				    <input class="show-back"></input>
+				    <input class="show-right"></input>
+				    <input class="show-left"></input>
+				    <input class="show-top"></input>
+				    <input class="show-bottom"></input>
+				  </p>
+				</div>
+			</div>
+			<div class="col-md-3 dice">
+				<div class="dieTwo">
+					<div class="die show-front">
+						<figure class="front 1"><img src="1.png" alt="die side 1"></figure>
+						<figure class="back 2"><img src="2.png" alt="die side 2"></figure>
+						<figure class="right 3"><img src="3.png" alt="die side 3"></figure>
+						<figure class="left 4"><img src="4.png" alt="die side 4"></figure>
+						<figure class="top 5"><img src="5.png" alt="die side 5"></figure>
+						<figure class="bottom 6"><img src="6.png" alt="die side 6"></figure>
+					</div>
+				</div>
+				<div id="options">
+				  <p id="show-buttons">
+				    <input type="image" class="show-front"></input>
+				    <input type="image" class="show-back"></input>
+				    <input type="image" class="show-right"></input>
+				    <input type="image" class="show-left"></input>
+				    <input type="image" class="show-top"></input>
+				    <input type="image" class="show-bottom"></input>
+				  </p>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<script src="utils.js"></script>
+	<script src="rotate-box.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="craps.js"></script>
+</body>
+</html>
