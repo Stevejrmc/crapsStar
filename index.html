@@ -9,6 +9,9 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 	<link rel="stylesheet" href="craps.css">
+	<script src="modernizr.2.5.3.min.js"></script>
+	<script src="utils.js"></script>
+	<script src="rotate-box.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -49,7 +52,55 @@
 			<div class="col-md-9"></div>
 		</div>
 		<div class="row three">
-			<div class="col-md-6 sandBox">
+			<!-- This is where the animations go! -->
+			<div class="col-md-6 dice">
+				<div id="dieOne">
+					<div id="die1" class="show-front">
+						<figure class="front 1"><img src="1.png" alt="die side 1"></figure>
+						<figure class="back 2"><img src="2.png" alt="die side 2"></figure>
+						<figure class="right 3"><img src="3.png" alt="die side 3"></figure>
+						<figure class="left 4"><img src="4.png" alt="die side 4"></figure>
+						<figure class="top 5"><img src="5.png" alt="die side 5"></figure>
+						<figure class="bottom 6"><img src="6.png" alt="die side 6"></figure>
+					</div>
+				</div>
+				<div id="options">
+				  <p id="show-buttons">
+				    <input type="image" src="1.png" width="20" height="20" class="show-front"></input>
+				    <input type="image" src="2.png" width="20" height="20" class="show-back"></input>
+				    <input type="image" src="3.png" width="20" height="20" class="show-right"></input>
+				    <input type="image" src="4.png" width="20" height="20" class="show-left"></input>
+				    <input type="image" src="5.png" width="20" height="20" class="show-top"></input>
+				    <input type="image" src="6.png" width="20" height="20" class="show-bottom"></input>
+				  </p>
+				</div>
+			</div>
+			<div class="col-md-6 dice">
+				<div id="dieTwo">
+					<div id="die2" class="show-front">
+						<figure class="front 1"><img src="1.png" alt="die side 1"></figure>
+						<figure class="back 2"><img src="2.png" alt="die side 2"></figure>
+						<figure class="right 3"><img src="3.png" alt="die side 3"></figure>
+						<figure class="left 4"><img src="4.png" alt="die side 4"></figure>
+						<figure class="top 5"><img src="5.png" alt="die side 5"></figure>
+						<figure class="bottom 6"><img src="6.png" alt="die side 6"></figure>
+					</div>
+				</div>
+				<div id="options">
+				  <p id="show-buttons2">
+				    <input type="image" src="1.png" width="20" height="20" class="show-front"></input>
+				    <input type="image" src="2.png" width="20" height="20" class="show-back"></input>
+				    <input type="image" src="3.png" width="20" height="20" class="show-right"></input>
+				    <input type="image" src="4.png" width="20" height="20" class="show-left"></input>
+				    <input type="image" src="5.png" width="20" height="20" class="show-top"></input>
+				    <input type="image" src="6.png" width="20" height="20" class="show-bottom"></input>
+				  </p>
+				</div>
+			</div>
+		</div>
+		<div class="row four">
+			<div class="col-md-4 spacer"></div>
+			<div class="col-md-4 sandBox">
 				<h2>Player</h2>
 				<table class="table">
 					<tr>
@@ -73,64 +124,13 @@
 					<input type="submit" class="btn btn-primary btn-lg btn-block" value="submit">
 				</form>
 			</div>
-			<!-- This is where the animations go! -->
-			<div class="col-md-3 dice">
-				<div class="dieOne">
-					<div class="die show-front">
-						<figure class="front 1"><img src="1.png" alt="die side 1"></figure>
-						<figure class="back 2"><img src="2.png" alt="die side 2"></figure>
-						<figure class="right 3"><img src="3.png" alt="die side 3"></figure>
-						<figure class="left 4"><img src="4.png" alt="die side 4"></figure>
-						<figure class="top 5"><img src="5.png" alt="die side 5"></figure>
-						<figure class="bottom 6"><img src="6.png" alt="die side 6"></figure>
-					</div>
-				</div>
-				<div id="options">
-				  <p id="show-buttons">
-				    <input class="show-front"></input>
-				    <input class="show-back"></input>
-				    <input class="show-right"></input>
-				    <input class="show-left"></input>
-				    <input class="show-top"></input>
-				    <input class="show-bottom"></input>
-				  </p>
-				</div>
-			</div>
-			<div class="col-md-3 dice">
-				<div class="dieTwo">
-					<div class="die show-front">
-						<figure class="front 1"><img src="1.png" alt="die side 1"></figure>
-						<figure class="back 2"><img src="2.png" alt="die side 2"></figure>
-						<figure class="right 3"><img src="3.png" alt="die side 3"></figure>
-						<figure class="left 4"><img src="4.png" alt="die side 4"></figure>
-						<figure class="top 5"><img src="5.png" alt="die side 5"></figure>
-						<figure class="bottom 6"><img src="6.png" alt="die side 6"></figure>
-					</div>
-				</div>
-				<div id="options">
-				  <p id="show-buttons">
-				    <input type="image" class="show-front"></input>
-				    <input type="image" class="show-back"></input>
-				    <input type="image" class="show-right"></input>
-				    <input type="image" class="show-left"></input>
-				    <input type="image" class="show-top"></input>
-				    <input type="image" class="show-bottom"></input>
-				  </p>
-				</div>
-			</div>
+			<div class="col-md-4 spacer"></div>
 		</div>
 	</div>	
 	<script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-	<script src="utils.js"></script>
-	<script src="rotate-box.js"></script>
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<!-- 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> -->
 	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<!-- 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
 	<script src="craps.js"></script>
 </body>
 </html>

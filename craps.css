@@ -36,6 +36,8 @@ h1 {
 
 h3 {
 	margin-left: 30px;
+	text-shadow: #8b0000 0 2px;
+	color: #ffbf00;
 }
 
 .dieL {
@@ -73,7 +75,7 @@ h3 {
 	background: linear-gradient(180deg, #004d00, #009a00);
 	box-shadow: 0px 0px 10px #333333;
 }
-.three {
+.three, .four {
 	text-align: center;
 	margin: 0 auto;
 }
@@ -108,21 +110,23 @@ h3 {
  }
 
  .sandBox {
- 	margin-top: 10px;
+ 	margin-top: 10px auto;
  	background-color: #f5f5f5;
  	border-radius: 3px;
  	padding-bottom: 10px;
  	box-shadow: 0px 5px 10px #333333;
  }
 
+ .spacer {
+	margin: 0 auto;
+ }
+
  .count {
  	display:block;
  	width:200px;
  	height:182px;
- 	/*position:relative;*/
  	margin-bottom:30px;
  	margin-right:20px;
- 	/*float:left;*/
  }
  .rollsNrules {
  	display:block;
@@ -142,7 +146,6 @@ h3 {
  	width:100%;
  	height:100%;
  	color:#8b0000;
- 	/*position:absolute;*/
  	background:#f5f5f5;
  }
  .count .rules p {
@@ -191,161 +194,156 @@ h3 {
  	-o-backface-visibility: hidden;
  	backface-visibility: hidden;
  }
-
-.die img {
-	width: 100px;
-	height: 100px;
+#die1 img {
+	width: 270px;
+	height: 270px;
+}
+#die2 img {
+	width: 270px;
+	height: 270px;
 }
 
-.dieOne {
-	width: 100px;
-	height: 100px;
+#dieOne {
+	width: 270px;
+	height: 270px;
 	position: relative;
-	margin: 0 auto;
+	margin: 0 auto 20px;
 	-webkit-perspective: 1000px;
 	-moz-perspective: 1000px;
 	-o-perspective: 1000px;
 	perspective: 1000px;
 }
 
-.dieTwo {
-	width: 100px;
-	height: 100px;
+#dieTwo {
+	width: 270px;
+	height: 270px;
 	position: relative;
-	margin: 0 auto;
+	margin: 0 auto 20px;
 	-webkit-perspective: 1000px;
 	-moz-perspective: 1000px;
 	-o-perspective: 1000px;
 	perspective: 1000px;
 }
 
-#show-buttons {
-	visibility: hidden;
+/*#show-buttons {
+	display: none;
 }
 
-.dieOne figure {
-	display: block;
-	position: absolute;
-	width: 100px;
-	height: 100px;
-	border: 2px solid black;
+#show-buttons2 {
+	display: none;
+}*/
+
+#show-buttons input {
+	background-color: #fff;
 }
 
-.dieTwo figure {
-	display: block;
-	position: absolute;
-	width: 100px;
-	height: 100px;
-	border: 2px solid black;
-}
-
-.dieOne.die {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	-o-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	-webkit-transition: -webkit-transform 1s;
-	-moz-transition: -moz-transform 1s;
-	-o-transition: -o-transform 1s;
-	transition: transform 1s;
-}
-
-.dieTwo.die {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	-o-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	-webkit-transition: -webkit-transform 1s;
-	-moz-transition: -moz-transform 1s;
-	-o-transition: -o-transform 1s;
-	transition: transform 1s;
+#show-buttons2 input {
+	background-color: #fff;
 }
 
 /*Die One*/
-.dieOne.die .front {
+
+#die1 figure {
+	display: block;
+	position: absolute;
+	width: 270px;
+	height: 270px;
+	border: 2px solid black;
+	background-color: #fff;
+}
+
+#die1{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform 1s;
+	-moz-transition: -moz-transform 1s;
+	-o-transition: -o-transform 1s;
+	transition: transform 1s;
+}
+
+#die1 .front {
 	-webkit-transform: translateZ(136px);
 	-moz-transform: translateZ(136px);
 	-o-transform: translateZ(136px);
 	transform: translateZ(136px);
 }
 
-.dieOne.die .back {
+#die1 .back {
 	-webkit-transform: rotateX(-180deg) translateZ(136px);
 	-moz-transform: rotateX(-180deg) translateZ(136px);
 	-o-transform: rotateX(-180deg) translateZ(136px);
 	transform: rotateX(-180deg) translateZ(136px);
 }
 
-.dieOne.die .right {
+#die1 .right {
 	-webkit-transform: rotateY(90deg) translateZ(136px);
 	-moz-transform: rotateY(90deg) translateZ(136px);
 	-o-transform: rotateY(90deg) translateZ(136px);
 	transform: rotateY(90deg) translateZ(136px);
 }
 
-.dieOne.die .left {
+#die1 .left {
 	-webkit-transform: rotateY(-90deg) translateZ(136px);
 	-moz-transform: rotateY(-90deg) translateZ(136px);
 	-o-transform: rotateY(-90deg) translateZ(136px);
 	transform: rotateY(-90deg) translateZ(136px);
 }
 
-.dieOne.die .top {
+#die1 .top {
 	-webkit-transform: rotateX(90deg) translateZ(136px);
 	-moz-transform: rotateX(90deg) translateZ(136px);
 	-o-transform: rotateX(90deg) translateZ(136px);
 	transform: rotateX(90deg) translateZ(136px);
 }
 
-.dieOne.die .bottom {
+#die1 .bottom {
 	-webkit-transform: rotateX(-90deg) translateZ(136px);
 	-moz-transform: rotateX(-90deg) translateZ(136px);
 	-o-transform: rotateX(-90deg) translateZ(136px);
 	transform: rotateX(-90deg) translateZ(136px);
 }
 
-.dieOne.die.show-front {
+#die1.show-front {
 	-webkit-transform: translateZ(-136px);
 	-moz-transform: translateZ(-136px);
 	-o-transform: translateZ(-136px);
 	transform: translateZ(-136px);
 }
 
-.dieOne.die.show-back {
+#die1.show-back {
 	-webkit-transform: translateZ(-136px) rotateX(180deg);
 	-moz-transform: translateZ(-136px) rotateX(180deg);
 	-o-transform: translateZ(-136px) rotateX(180deg);
 	transform: translateZ(-136px) rotateX(180deg);
 }
 
-.dieOne.die.show-right {
+#die1.show-right {
 	-webkit-transform: translateZ(-136px) rotateY(-90deg);
 	-moz-transform: translateZ(-136px) rotateY(-90deg);
 	-o-transform: translateZ(-136px) rotateY(-90deg);
 	transform: translateZ(-136px) rotateY(-90deg);
 }
 
-.dieOne.die.show-left {
+#die1.show-left {
 	-webkit-transform: translateZ(-136px) rotateY(90deg);
 	-moz-transform: translateZ(-136px) rotateY(90deg);
 	-o-transform: translateZ(-136px) rotateY(90deg);
 	transform: translateZ(-136px) rotateY(90deg);
 }
 
-.dieOne.die.show-top {
+#die1.show-top {
 	-webkit-transform: translateZ(-136px) rotateX(-90deg);
 	-moz-transform: translateZ(-136px) rotateX(-90deg);
 	-o-transform: translateZ(-136px) rotateX(-90deg);
 	transform: translateZ(-136px) rotateX(-90deg);
 }
 
-.dieOne.die.show-bottom {
+#die1.show-bottom {
 	-webkit-transform: translateZ(-136px) rotateX(90deg);
 	-moz-transform: translateZ(-136px) rotateX(90deg);
 	-o-transform: translateZ(-136px) rotateX(90deg);
@@ -354,84 +352,108 @@ h3 {
 
 
 /*Die Two*/
-.dieTwo.die .front {
+
+#die2 figure {
+	display: block;
+	position: absolute;
+	width: 270px;
+	height: 270px;
+	border: 2px solid black;
+	background-color: #fff;
+}
+
+#die2 {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform 1s;
+	-moz-transition: -moz-transform 1s;
+	-o-transition: -o-transform 1s;
+	transition: transform 1s;
+}
+
+#die2 .front {
 	-webkit-transform: translateZ(136px);
 	-moz-transform: translateZ(136px);
 	-o-transform: translateZ(136px);
 	transform: translateZ(136px);
 }
 
-.dieTwo.die .back {
+#die2 .back {
 	-webkit-transform: rotateX(-180deg) translateZ(136px);
 	-moz-transform: rotateX(-180deg) translateZ(136px);
 	-o-transform: rotateX(-180deg) translateZ(136px);
 	transform: rotateX(-180deg) translateZ(136px);
 }
 
-.dieTwo.die .right {
+#die2 .right {
 	-webkit-transform: rotateY(90deg) translateZ(136px);
 	-moz-transform: rotateY(90deg) translateZ(136px);
 	-o-transform: rotateY(90deg) translateZ(136px);
 	transform: rotateY(90deg) translateZ(136px);
 }
 
-.dieTwo.die .left {
+#die2 .left {
 	-webkit-transform: rotateY(-90deg) translateZ(136px);
 	-moz-transform: rotateY(-90deg) translateZ(136px);
 	-o-transform: rotateY(-90deg) translateZ(136px);
 	transform: rotateY(-90deg) translateZ(136px);
 }
 
-.dieTwo.die .top {
+#die2 .top {
 	-webkit-transform: rotateX(90deg) translateZ(136px);
 	-moz-transform: rotateX(90deg) translateZ(136px);
 	-o-transform: rotateX(90deg) translateZ(136px);
 	transform: rotateX(90deg) translateZ(136px);
 }
 
-.dieTwo.die .bottom {
+#die2 .bottom {
 	-webkit-transform: rotateX(-90deg) translateZ(136px);
 	-moz-transform: rotateX(-90deg) translateZ(136px);
 	-o-transform: rotateX(-90deg) translateZ(136px);
 	transform: rotateX(-90deg) translateZ(136px);
 }
 
-.dieTwo.die.show-front {
+#die2.show-front {
 	-webkit-transform: translateZ(-136px);
 	-moz-transform: translateZ(-136px);
 	-o-transform: translateZ(-136px);
 	transform: translateZ(-136px);
 }
 
-.dieTwo.die.show-back {
+#die2.show-back {
 	-webkit-transform: translateZ(-136px) rotateX(180deg);
 	-moz-transform: translateZ(-136px) rotateX(180deg);
 	-o-transform: translateZ(-136px) rotateX(180deg);
 	transform: translateZ(-136px) rotateX(180deg);
 }
 
-.dieTwo.die.show-right {
+#die2.show-right {
 	-webkit-transform: translateZ(-136px) rotateY(-90deg);
 	-moz-transform: translateZ(-136px) rotateY(-90deg);
 	-o-transform: translateZ(-136px) rotateY(-90deg);
 	transform: translateZ(-136px) rotateY(-90deg);
 }
 
-.dieTwo.die.show-left {
+#die2.show-left {
 	-webkit-transform: translateZ(-136px) rotateY(90deg);
 	-moz-transform: translateZ(-136px) rotateY(90deg);
 	-o-transform: translateZ(-136px) rotateY(90deg);
 	transform: translateZ(-136px) rotateY(90deg);
 }
 
-.dieTwo.die.show-top {
+#die2.show-top {
 	-webkit-transform: translateZ(-136px) rotateX(-90deg);
 	-moz-transform: translateZ(-136px) rotateX(-90deg);
 	-o-transform: translateZ(-136px) rotateX(-90deg);
 	transform: translateZ(-136px) rotateX(-90deg);
 }
 
-.dieTwo.die.show-bottom {
+#die2.show-bottom {
 	-webkit-transform: translateZ(-136px) rotateX(90deg);
 	-moz-transform: translateZ(-136px) rotateX(90deg);
 	-o-transform: translateZ(-136px) rotateX(90deg);
