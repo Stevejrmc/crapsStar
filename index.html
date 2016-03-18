@@ -35,25 +35,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="row two">
-			<div class="col-md-3">
-				<h3>Rolls & Rules</h3>
-				<div class="count slide">
-					<div class="rollsNrules">
-						<h2 id="rollCount">
-							0
-						</h2>
-						<div class="rules">
-							<p>The rules of the game are as follows.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-9"></div>
-		</div>
 		<div class="row three">
 			<!-- This is where the animations go! -->
-			<div class="col-md-6 dice">
+			<div class="col-md-4 dice">
 				<div id="dieOne">
 					<div id="die1" class="show-front">
 						<figure class="front 1"><img src="1.png" alt="die side 1"></figure>
@@ -64,6 +48,7 @@
 						<figure class="bottom 6"><img src="6.png" alt="die side 6"></figure>
 					</div>
 				</div>
+				<img class="dieShadow" src="http://files.totalhomesupply.com/land/breeze/img/videoBoxShadow.png" alt="shadow">
 				<div id="options">
 				  <p id="show-buttons">
 				    <input type="image" src="1.png" width="20" height="20" class="show-front"></input>
@@ -75,7 +60,26 @@
 				  </p>
 				</div>
 			</div>
-			<div class="col-md-6 dice">
+			<div class="col-md-2">
+				<h3>Rolls & Rules</h3>
+				<div class="count slide">
+					<div class="rollsNrules">
+						<h2 id="rollCount">
+							0
+						</h2>
+						<div class="rules">
+							<p>Roll 7 or 11 on the first throw & win. Roll 2, 3, or 12 on the first throw --"craps"--the player loses. Roll anything else on first throw, that is your "point". To win, you must continue rolling the dice until you "make your point". You lose if you roll a 7 before making the point.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<h3>Point</h3>
+				<div class="msg">
+					<h2 id="point"></h2>
+				</div>
+			</div>
+			<div class="col-md-4 dice">
 				<div id="dieTwo">
 					<div id="die2" class="show-front">
 						<figure class="front 1"><img src="1.png" alt="die side 1"></figure>
@@ -86,6 +90,7 @@
 						<figure class="bottom 6"><img src="6.png" alt="die side 6"></figure>
 					</div>
 				</div>
+				<img class="dieShadow" src="http://files.totalhomesupply.com/land/breeze/img/videoBoxShadow.png" alt="shadow">
 				<div id="options">
 				  <p id="show-buttons2">
 				    <input type="image" src="1.png" width="20" height="20" class="show-front"></input>
@@ -101,36 +106,27 @@
 		<div class="row four">
 			<div class="col-md-4 spacer"></div>
 			<div class="col-md-4 sandBox">
-				<h2>Player</h2>
-				<table class="table">
-					<tr>
-						<th scope="row">Die 1</th>
-						<td colspan="2"><input type="text" class="form-control" id="d1"></td>
-					</tr>
-					<tr>
-						<th scope="row">Die 2</th>
-						<td colspan="2"><input type="text" class="form-control" id="d2"></td>
-					</tr>
-					<tr>
-						<th scope="row">Sum</th>
-						<td colspan="2"><input type="text" class="form-control" id="sum"></td>
-					</tr>
-					<tr>
-						<th scope="row">Point</th>
-						<td colspan="2"><input type="text" class="form-control" id="point"></td>
-					</tr>
-				</table><br>
 				<form id="roll">
-					<input type="submit" class="btn btn-primary btn-lg btn-block" value="submit">
+					<label for="roll">Throw them dice!</label>
+					<input type="submit" class="btn btn-primary btn-lg btn-block" id="roll" value="Roll">
 				</form>
+				<button type="button" class="btn btn-primary msgBtn" data-toggle="modal" data-target=".msgModal">message</button>
+				<div class="modal fade msgModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+				  <div class="modal-dialog modal-sm">
+				    <div class="modal-content">
+				      
+				    </div>
+				  </div>
+				</div>
 			</div>
 			<div class="col-md-4 spacer"></div>
 		</div>
-	</div>	
+	</div>
+	<audio id="player" src="dice.wav"></audio>
 	<script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
-<!-- 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
-<!-- 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script src="craps.js"></script>
 </body>
 </html>
