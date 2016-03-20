@@ -70,11 +70,13 @@ $(function(){
 				$msg.text("Congratulations, you've won!");
 				window.setTimeout(messenger, 2000);
 				rollCount = 0;
+				$point.text(rollCount);
 				$rollNum.text(rollCount);
 			} else if(sum === 7){
 				$msg.text('House wins!');
 				window.setTimeout(messenger, 2000);
 				rollCount = 0;
+				$point.text(rollCount);
 				$rollNum.text(rollCount);
 			} else {
 				allBetsIn(sum);
@@ -84,11 +86,13 @@ $(function(){
 				$msg.text("You rolled a "+ sum + ' on your first throw!' + " Congratulations, you've won!");
 				window.setTimeout(messenger, 2000);
 				rollCount = 0;
+				$point.text(rollCount);
 				$rollNum.text(rollCount);
 			} else if(sum === 2 || sum === 3 || sum === 12){
 				$msg.text('Craps! House wins!');
 				window.setTimeout(messenger, 2000);
 				rollCount = 0;
+				$point.text(rollCount);
 				$rollNum.text(rollCount);
 			} else{
 				$point.text(sum);
